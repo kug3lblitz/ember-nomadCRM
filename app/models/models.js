@@ -1,6 +1,8 @@
 import Ember from "ember";
 import DS from "ember-data";
 
+var App = Ember.Application.create();
+
 App.Taskable = DS.Model.extend({
     
     tasks: DS.hasMany('task', {async: true})
