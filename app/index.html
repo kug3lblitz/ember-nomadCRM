@@ -17,6 +17,31 @@
   <body>
     {{content-for 'body'}}
 
+    <script type="text/x-handlebars">
+    <div class="container">
+
+        <h2>Ember CRM</h2>
+          <aside>
+            <ul class="nav nav-pills">
+                <li>
+                    {{#link-to 'companies'}}
+                      Companies
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'people'}}
+                      People
+                    {{/link-to}}
+                </li>
+            </ul>
+          </aside>
+
+          <section class="main">
+              {{outlet}}
+          </section>
+    </div>
+    </script>
+
     <script src="assets/vendor.js"></script>
     <script src="assets/ember-nomad-crm.js"></script>
 
