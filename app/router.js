@@ -1,5 +1,5 @@
-import Ember from 'ember';
-import config from './config/environment';
+import DS from 'ember-data';
+import App from 'ember-data';
 
 App.Taskable = DS.Model.extend({
 
