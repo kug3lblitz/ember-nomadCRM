@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route("reader");
+    this.resource("record");
 });
 
 export default Router;
