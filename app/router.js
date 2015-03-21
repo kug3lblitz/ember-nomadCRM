@@ -7,8 +7,12 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
     this.route("home");
-    this.resource("companies");
-    this.resource("people");
+    this.resource("companies", function() {
+        this.route("new-record");
+    });
+    this.resource("people", function() {
+        this.route("new-record");
+    });
 });
 
 export default Router;
