@@ -1,7 +1,9 @@
-# Ember-nomad-crm
+# CR(a)M - A lightweight bookkeeping solution
+
+The objective of this project is to create a swift, lightweight, and completely free CRM.
+It is still under development.
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
 

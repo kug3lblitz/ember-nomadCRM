@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route("reader");
+    this.route("home");
     this.resource("companies");
     this.resource("people");
 });
