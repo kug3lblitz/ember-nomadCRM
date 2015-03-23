@@ -13,6 +13,8 @@ Router.map(function() {
     this.resource("people", function() {
         this.route("new");
     });
+    this.route("login");
+    this.route("register");
 });
 
 export default Router;

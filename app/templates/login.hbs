@@ -1,0 +1,23 @@
+<form class="form-horizontal col-lg-6 col-lg-offset-3" {{action 'authenticate' on='submit'}}>
+  <fieldset>
+
+    <div class="form-group">
+      <label for="identification" class="control-label">Email</label>
+      <div>
+        {{input value=identification placeholder='Enter Email' type='email' class="form-control"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="control-label">Password</label>
+      <div>
+        {{input value=password placeholder='Enter Password' type='password' class="form-control"}}
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+    <p>
+      Don't have an account? {{link-to 'Register' 'register'}}
+    </p>
+  </fieldset>
+</form>
