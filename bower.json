@@ -14,5 +14,8 @@
     "qunit": "~1.17.1",
     "ember-simple-auth": "0.7.3",
     "bootstrap": "~3.3.4"
+  },
+  "devDependencies": {
+    "underscore": "~1.8.2"
   }
 }
