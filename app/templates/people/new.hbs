@@ -1,10 +1,10 @@
 <div class="newRecord">
-    <input type="staffName" placeholder="Staff Name" class="staffName">
-    <input type="coName" placeholder="Company Name" class="coNameInput">
-    <input type="coAddress" placeholder="Address" class="coAddr">
-    <input type="coPhone" placeholder="Phone #" class="coPhone">
-    <input type="Website" placeholder="Website" class="coWebsite">
-    <input type="indType" placeholder="Industry Type" class="indType">
+    {{input value=model.name placeholder="Staff Name" class="staffName"}}
+    {{input value=model.company placeholder="Company Name" class="coNameInput"}}
+    {{input value=model.address placeholder="Address" class="coAddr"}}
+    {{input value=model.phone placeholder="Phone #" class="coPhone"}}
+    {{input value=model.website placeholder="Website" class="coWebsite"}}
+    {{input value=model.industry placeholder="Industry Type" class="indType"}}
 
     <button {{action 'createRecord'}} class="submit">Submit</button>
 </div>
