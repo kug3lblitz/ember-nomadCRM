@@ -1,11 +1,4 @@
-import DS from 'ember-data';
+import Model from 'ember-magic-man/model';
 
-export default DS.Model.extend({
-    name: DS.attr('string'),
-    company: DS.attr('string'),
-    address: DS.attr('string'),
-    phone: DS.attr('string'),
-    website: DS.attr('string'),
-    industry: DS.attr('string'),
-    notes: DS.hasMany('note', {async: true})
+export default Model.extend({
 });

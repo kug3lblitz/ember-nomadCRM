@@ -1,5 +1,5 @@
-import DS from 'ember-data';
+import Model from 'ember-magic-man/model';
 
-export default DS.Model.extend({
+export default Model.extend({
   
 });
