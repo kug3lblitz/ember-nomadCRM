@@ -35,4 +35,38 @@ export default Ember.Object.extend({
       });
     }
   }
+
+//export default Ember.Object.extend({
+  //find: function(name, id){
+    //var dispRecord;
+    //return ajax("https://api.parse.com/1/classes/Person/" + id + "?include=createdBy").then(function(response){
+      //dispRecord = response;
+      //dispRecord.id = dispRecord.objectId;
+      //delete dispRecord.objectId;
+      //dispRecord.createdBy.id = dispRecord.createdBy.objectId;
+      //delete dispRecord.createdBy.objectId;
+      //return ajax("https://api.parse.com/1/users/", {
+        //type: "GET",
+        //data: {
+          //where: JSON.stringify({
+            //"$relatedTo":{
+              //"object":{
+                //"__type":"Pointer",
+                //"className":"Person",
+                //"objectId": id
+              //},
+              //"key":""
+            //}
+          //})
+        //}
+      //});
+    //}).then(function(response){
+      //dispRecord.persRec = response.results.map(function(persRec) {
+       //persRec.id = persRec.objectId;
+       //return persRec;
+      //});
+      //return dispRecord;
+    //});
+  //}
+
 });
