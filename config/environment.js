@@ -54,7 +54,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/ember-crm/';
+    ENV.baseURL = '/CRaM/';
 
   }
 
