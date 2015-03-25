@@ -7,14 +7,12 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
     this.route("/");
-    this.resource("companies", function() {
-        this.route("new");
-    });
     this.resource("people", function() {
         this.route("new");
     });
     this.route("login");
     this.route("register");
+    this.route("pullRec");
 });
 
 export default Router;

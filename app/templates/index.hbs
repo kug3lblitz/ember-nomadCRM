@@ -1,1 +1,9 @@
-{{outlet}}
+{{#each person in model}}
+  {{person.company}}
+  {{person.name}}
+  {{person.address}}
+  {{person.industry}}
+  {{person.phone}}
+  {{person.website}}
+  
+{{/each}}
