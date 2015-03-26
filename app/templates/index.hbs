@@ -1,61 +1,54 @@
+<table>
+    <th>
+        <td>Company Name</td>
+    </th>
 {{#each person in model}}
 
-<ul class="recFrame">
+<tr class="recFrame">
 
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Company</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.company}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
     
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Name</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.name}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
 
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Address</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.address}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
 
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Industry</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.industry}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
     
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Phone</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.phone}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
 
-    <li class="NrecFrame">
+    <td class="NrecFrame">
         <h4>Website</h4>
         <ul>
-            {{#each person in model}}
             <li>{{person.website}}</li>
-            {{/each}}
         </ul>
-    </li>
+    </td>
 
-  </ul>
+</tr>
   
 {{/each}}
+</table>
