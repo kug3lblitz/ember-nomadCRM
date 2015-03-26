@@ -7,9 +7,9 @@ export default Base.extend({
     jqXHR.setRequestHeader("X-Parse-Application-Id", ENV.parseKeys.applicationId);
     jqXHR.setRequestHeader("X-Parse-REST-API-Key", ENV.parseKeys.restApi);
 
-    //var sessionToken = this.get('session.sessionToken');
-    //if (!Ember.isEmpty(sessionToken)) {
-      //jqXHR.setRequestHeader('X-Parse-Session-Token', sessionToken);
-    //}
+    var sessionToken = this.get('session.sessionToken');
+    if (!Ember.isEmpty(sessionToken)) {
+      jqXHR.setRequestHeader('X-Parse-Session-Token', sessionToken);
+    }
   }
 });

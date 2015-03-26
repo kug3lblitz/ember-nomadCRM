@@ -1,9 +1,48 @@
 {{#each person in model}}
-  {{person.company}}
-  {{person.name}}
-  {{person.address}}
-  {{person.industry}}
-  {{person.phone}}
-  {{person.website}}
+<ul class="recFrame">
+
+    <li class="NrecFrame">
+        <h4>Company</h4>
+        <ul>
+            <li>{{person.company}}</li>
+        </ul>
+    </li>
+    
+    <li class="NrecFrame">
+        <h4>Name</h4>
+        <ul>
+            <li>{{person.name}}</li>
+        </ul>
+    </li>
+
+    <li class="NrecFrame">
+        <h4>Address</h4>
+        <ul>
+            <li>{{person.address}}</li>
+        </ul>
+    </li>
+
+    <li class="NrecFrame">
+        <h4>Industry</h4>
+        <ul>
+            <li>{{person.industry}}</li>
+        </ul>
+    </li>
+    
+    <li class="NrecFrame">
+        <h4>Phone</h4>
+        <ul>
+            <li>{{person.phone}}</li>
+        </ul>
+    </li>
+
+    <li class="NrecFrame">
+        <h4>Website</h4>
+        <ul>
+            <li>{{person.website}}</li>
+        </ul>
+    </li>
+
+  </ul>
   
 {{/each}}
