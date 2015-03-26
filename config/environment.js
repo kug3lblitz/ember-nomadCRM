@@ -7,7 +7,8 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     contentSecurityPolicy: {
-        'connect-src': "'self' https://api.parse.com"
+        'connect-src': "'self' https://api.parse.com",
+        'style-src': "'self' 'unsafe-inline'"
     },
 
     EmberENV: {

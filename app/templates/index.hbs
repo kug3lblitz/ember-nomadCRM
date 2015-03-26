@@ -27,8 +27,15 @@
 
 <tr class="recFrame">
 
-    <td class="NrecFrame">
-        <p>{{person.company}}</p>
+    <td {{bind-attr class="isCompleted:completed isEditing:editing :NrecFrame"}}>
+        <p>
+        {{#if isEditing}}
+            {{input type="text" value=person.company class="edit"}}
+            <button>Save</button>
+        {{else}}
+            <label {{action "editPerson" on="doubleClick"}}></label><button class="destroy"></button>
+            {{person.company}}
+        {{/if}}</p>
     </td>
     
     <td class="NrecFrame">

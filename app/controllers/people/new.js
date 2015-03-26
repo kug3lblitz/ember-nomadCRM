@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
         this.get('model').save().then(function(){
             this.transitionToRoute('index');
         }.bind(this));
+      },
+        editRecord: function() {
+            this.set('isEditing', true);
       }
     }
 });

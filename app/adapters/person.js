@@ -46,5 +46,28 @@ export default Ember.Object.extend({
       delete user.objectId;
       return user;
     });
-  }
+  },
+ 
+  findQuery: function(name, query) {
+    /* jshint unused: false */
+    return ajax("https://api.parse.com/1/classes/Person", {
+      data: Ember.$.param({
+              where: JSON.stringify(query)
+            })
+    }).then(function(response){
+      return response.results.map(function(person) {
+        person.id = person.objectId;
+        delete person.objectId;
+        return person;
+      });
+    });
+  },
+
+  destroy: function(name, record) {
+    /* jshint unused: false */
+    return ajax({
+      url: "https://api.parse.com/1/classes/Person/" + record.id,
+      type: "DELETE"
+    });
+  },
 });
