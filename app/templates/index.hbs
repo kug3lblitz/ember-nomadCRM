@@ -2,50 +2,53 @@
     <th>
         <td>Company Name</td>
     </th>
+
+    <th>
+        <td>Name</td>
+    </th>
+
+    <th>
+        <td>Address</td>
+    </th>
+
+    <th>
+        <td>Industry</td>
+    </th>
+
+    <th>
+        <td>Phone</td>
+    </th>
+
+    <th>
+        <td>Website</td>
+    </th>
+
 {{#each person in model}}
 
 <tr class="recFrame">
 
     <td class="NrecFrame">
-        <h4>Company</h4>
-        <ul>
-            <li>{{person.company}}</li>
-        </ul>
+        <p>{{person.company}}</p>
     </td>
     
     <td class="NrecFrame">
-        <h4>Name</h4>
-        <ul>
-            <li>{{person.name}}</li>
-        </ul>
+        <p>{{person.name}}</p>
     </td>
 
     <td class="NrecFrame">
-        <h4>Address</h4>
-        <ul>
-            <li>{{person.address}}</li>
-        </ul>
+        <p>{{person.address}}</p>
     </td>
 
     <td class="NrecFrame">
-        <h4>Industry</h4>
-        <ul>
-            <li>{{person.industry}}</li>
-        </ul>
+        <p>{{person.industry}}</p>
     </td>
     
     <td class="NrecFrame">
-        <h4>Phone</h4>
-        <ul>
-            <li>{{person.phone}}</li>
-        </ul>
+        <p>{{person.phone}}</p>
     </td>
 
     <td class="NrecFrame">
-        <h4>Website</h4>
-        <ul>
-            <li>{{person.website}}</li>
-        </ul>
+        <p>{{person.website}}</p>
     </td>
 
 </tr>
