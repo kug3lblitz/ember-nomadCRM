@@ -1,0 +1,12 @@
+/*structure*/
+
+.contactTable {  
+  width: 90%;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid #6a808f 2px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
