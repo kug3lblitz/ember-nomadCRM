@@ -23,32 +23,44 @@
         <td>Website</td>
     </th>
 
-    {{#each person in model itemController="person"}}
+    {{#each person in model itemController='people/person'}}
 
     <tr class="recFrame">
 
         <td class="NrecFrame">
-            <h6>{{person.model.company}}</h6>
+            {{#view 'double-click' valueBinding="person.model.company"}}
+                <h6>{{person.model.company}}</h6>
+            {{/view}}
         </td>
         
         <td class="NrecFrame">
+            {{#view 'double-click' valueBinding="person.model.name"}}
             <h6>{{person.model.name}}</h6>
+            {{/view}}
         </td>
 
         <td class="NrecFrame">
+            {{#view 'double-click' valueBinding="person.model.address"}}
             <h6>{{person.model.address}}</h6>
+            {{/view}}
         </td>
 
         <td class="NrecFrame">
+            {{#view 'double-click' valueBinding="person.model.industry"}}
             <h6>{{person.model.industry}}</h6>
+            {{/view}}
         </td>
         
         <td class="NrecFrame">
+            {{#view 'double-click' valueBinding="person.model.phone"}}
             <h6>{{person.model.phone}}</h6>
+            {{/view}}
         </td>
 
         <td class="NrecFrame">
+            {{#view 'double-click' valueBinding="person.model.website"}}
             <h6>{{person.model.website}}</h6>
+            {{/view}}
         </td>
 
     </tr>

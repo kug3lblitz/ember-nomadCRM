@@ -1,0 +1,5 @@
+{{#if view.isEditing}}
+  {{view view.textField valueBinding="view.value" action=save}}
+{{else}}
+ {{view.value}}
+{{/if}}
