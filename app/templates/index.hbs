@@ -23,42 +23,35 @@
         <td>Website</td>
     </th>
 
-{{#each person in model}}
+    {{#each person in model itemController="person"}}
 
-<tr class="recFrame">
+    <tr class="recFrame">
 
-    <td {{bind-attr class="isCompleted:completed isEditing:editing :NrecFrame"}}>
-        <p>
-        {{#if isEditing}}
-            {{input type="text" value=person.company class="edit"}}
-            <button>Save</button>
-        {{else}}
-            <label {{action "editPerson" on="doubleClick"}}></label><button class="destroy"></button>
-            {{person.company}}
-        {{/if}}</p>
-    </td>
-    
-    <td class="NrecFrame">
-        <p>{{person.name}}</p>
-    </td>
+        <td class="NrecFrame">
+            <h6>{{person.model.company}}</h6>
+        </td>
+        
+        <td class="NrecFrame">
+            <h6>{{person.model.name}}</h6>
+        </td>
 
-    <td class="NrecFrame">
-        <p>{{person.address}}</p>
-    </td>
+        <td class="NrecFrame">
+            <h6>{{person.model.address}}</h6>
+        </td>
 
-    <td class="NrecFrame">
-        <p>{{person.industry}}</p>
-    </td>
-    
-    <td class="NrecFrame">
-        <p>{{person.phone}}</p>
-    </td>
+        <td class="NrecFrame">
+            <h6>{{person.model.industry}}</h6>
+        </td>
+        
+        <td class="NrecFrame">
+            <h6>{{person.model.phone}}</h6>
+        </td>
 
-    <td class="NrecFrame">
-        <p>{{person.website}}</p>
-    </td>
+        <td class="NrecFrame">
+            <h6>{{person.model.website}}</h6>
+        </td>
 
-</tr>
+    </tr>
   
 {{/each}}
 </table>
