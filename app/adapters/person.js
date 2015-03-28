@@ -12,6 +12,7 @@ export default Ember.Object.extend({
         data: JSON.stringify(record.toJSON())
       }).then(function(response) {
         record.updatedAt = response.updatedAt;
+        record.sessionToken = response.sessionToken;
         return record;
       });
 

@@ -43,8 +43,26 @@ export default Ember.Controller.extend({
         controller.save();
       }
       parentView.set('isEditing', false);
+    },
+
+    acceptChanges: function() {
+        // Remove is editing property
+        this.set('isEditing', false);
+
+        // If the person is empty, delete it
+        // otherwise save it with the new title
+        if(Ember.isEmpty(this.get('model.title'))) {
+            this.send('removePerson');
+        } else {
+            this.get('model').save();
+        }
+    },
+  
+    removePerson: function() {
+        var person = this.get('model');
+        person.deleteRecord();
+        person.save();
     }
   })
  }
 });
-
