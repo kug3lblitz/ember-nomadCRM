@@ -1,7 +1,7 @@
 # CR(a)M - A lightweight bookkeeping solution
 
-The objective of this project is to create a swift, lightweight, and completely free CRM.
-It is still under development.
+The objective of this project is to create a swift, lightweight, and completely free cross-platform CRM.
+It is still under development. Future updates will include Google account integration, notes, and an improved UI.
 
 This README outlines the details of collaborating on this Ember application.
 
