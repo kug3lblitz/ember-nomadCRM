@@ -12,7 +12,7 @@ export default Model.extend({
             {
               __type: 'Pointer',
               className: 'Person',
-              objectId: bookmark.id
+              objectId: person.id
             }
           ]
         }
