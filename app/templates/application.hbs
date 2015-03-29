@@ -2,16 +2,30 @@
 
     <h4 class="navbar-brand" id="title">CR(a)M: a lightweight bookkeeping solution</h4>
 
-        <div class="collapse navbar-collapse hdrMenu">
+        <div class="collapse navbar-collapse navbar-responsive-collapse hdrMenu">
 
             <ul class="nav navbar-nav mainNav">
-                <li class="login">{{#link-to 'login'}}Login{{/link-to}}</li>
+                <!--<li class="login">{{#link-to 'login'}}Login{{/link-to}}</li>-->
                 <li>{{#link-to '/'}}Home{{/link-to}}</li>
                 <li>{{#link-to 'people'}}Create New Record{{/link-to}}</li>
                 <li>{{#link-to 'pullRec'}}View Records{{/link-to}}</li>
             </ul>
 
-        </div>
+        <form class="navbar-form navbar-left" {{action 'search' on='submit' }}>
+          {{input type="text" class="form-control col-lg-8" placeholder="Search" value=searchTerm}}
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+              {{#if session.isAuthenticated}}
+                <a {{ action 'invalidateSession' }} href="javascript:void(0)">Logout</a>
+              {{else}}
+                {{#link-to 'login'}}Login{{/link-to}}
+              {{/if}}
+            </li>
+        </ul>
+    </div> 
+
  </nav>
     
     <div class="main">
