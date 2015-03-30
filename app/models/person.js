@@ -1,31 +1,18 @@
-import ajax from 'ic-ajax';
 import Model from 'ember-magic-man/model';
 
 export default Model.extend({
+  toJSON: function(){
+    var data = this._super();
 
-  saveRecord: function(name, record) {
-    if(record.id) {
-      return ajax({
-        url: "https://api.parse.com/1/classes/Person/" + record.id,
-        type: "PUT",
-        data: JSON.stringify(record.toJSON())
-      }).then(function(response) {
-        record.updatedAt = response.updatedAt;
-        record.sessionToken = response.sessionToken;
-        return record;
-      });
-
-    } else {
-      return ajax({
-        url: "https://api.parse.com/1/classes/Person",
-        type: "POST",
-        data: JSON.stringify(record.toJSON())
-      }).then(function(response) {
-        record.id = response.objectId;
-        record.createdAt = response.createdAt;
-        record.sessionToken = response.sessionToken;
-        return record;
+    var userId = this.get('createdBy.id');
+    if(userId) {
+      data.set('createdBy', {
+        __type: 'Pointer',
+        className: '_User',
+        objectId: userId
       });
     }
+
+    return data;
   }
 });

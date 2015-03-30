@@ -21,8 +21,8 @@ export default Ember.View.extend({
 
     textField: Ember.TextField.extend({
         focusOut: function() {
-          this.saveRecord();
           this.save();
+          this.saveRecord();
         },
 
         save: function() {
@@ -33,8 +33,7 @@ export default Ember.View.extend({
             controller.save();
           }
           parentView.set('isEditing', false);
-        }
-    }),
+        },
 
       saveRecord: function(name, record) {
         if(record.id) {
@@ -61,4 +60,6 @@ export default Ember.View.extend({
           });
         }
       }
+    })
+
 });
