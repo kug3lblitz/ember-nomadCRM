@@ -1,3 +1,4 @@
+import ajax from 'ic-ajax';
 import Ember from 'ember';
 import layout from '../templates/double-click';
 
