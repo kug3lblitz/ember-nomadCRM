@@ -6,13 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route("/");
-    //this.resource('person', { path: ':person_name'}
+    this.route('login', {path: '/'});
+    this.route("register");
+    this.route("records");
     this.resource("people", function() {
         this.route("new");
     });
-    this.route("login");
-    this.route("register");
     this.route("pullRec");
 });
 
