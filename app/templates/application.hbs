@@ -1,6 +1,10 @@
  <nav class="navbar navbar-default">   
 
+     {{#if session.isAuthenticated}}
+        {{else}}
     <h4 class="navbar-brand" id="title">CR(a)M: a lightweight bookkeeping solution</h4>
+     {{/if}}
+
 
         <div class="collapse navbar-collapse navbar-responsive-collapse hdrMenu">
 
