@@ -5,21 +5,25 @@
         <div class="collapse navbar-collapse navbar-responsive-collapse hdrMenu">
 
             <ul class="nav navbar-nav mainNav">
+                {{#if session.isAuthenticated}}
                 <li>{{#link-to 'records'}}View Records{{/link-to}}</li>
                 <li>{{#link-to 'people'}}Create New Record{{/link-to}}</li>
                 <li>{{#link-to 'pullRec'}}Messages{{/link-to}}</li>
+                {{/if}}
             </ul>
 
+        {{#if session.isAuthenticated}}
         <form class="navbar-form navbar-left" {{action 'search' on='submit' }}>
           {{input type="text" class="form-control col-lg-8" placeholder="Search" value=searchTerm}}
         </form>
+        {{/if}}
 
         <ul class="nav navbar-nav navbar-right">
             <li>
               {{#if session.isAuthenticated}}
                 <a {{ action 'invalidateSession' }} href="javascript:void(0)">Logout</a>
               {{else}}
-                {{#link-to 'login'}}Login{{/link-to}}
+                {{#link-to 'login'}}Login or Sign Up{{/link-to}}
               {{/if}}
             </li>
         </ul>
