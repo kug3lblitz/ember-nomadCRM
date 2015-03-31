@@ -12,50 +12,43 @@ export default Ember.Controller.extend({
         editRecord: function() {
             this.set('isEditing', true);
       },
-       
+      },
 
-  doubleClick: function() {
-      console.log("hi");
-    if (!this.get('isEditing'))  {
-      this.set('isEditing', true);
-      Ember.run.scheduleOnce('afterRender', this, this.focusTextField);
-    }
-  },
+  //doubleClick: function() {
+      //console.log("hi");
+    //if (!this.get('isEditing'))  {
+      //this.set('isEditing', true);
+      //Ember.run.scheduleOnce('afterRender', this, this.focusTextField);
+    //}
+  //},
 
-  focusTextField: function() {
-    var val = this.$('input').val();
-    this.$('input').focus();
+  //focusTextField: function() {
+    //var val = this.$('input').val();
+    //this.$('input').focus();
 
-    this.$('input').val('');
-    this.$('input').val(val);
-  },
+    //this.$('input').val('');
+    //this.$('input').val(val);
+  //},
 
-  textField: Ember.TextField.extend({
-    focusOut: function() {
-      this.save();
-    },
+  //textField: Ember.TextField.extend({
+    //focusOut: function() {
+      //this.save();
+    //},
+
+    //save: function() {
+      //var parentView = this.get('parentView');
+      //var controller = parentView.get('controller');
+
+      //if (controller.save) {
+        //controller.save();
+      //}
+      //parentView.set('isEditing', false);
+    //},
 
     save: function() {
-      var parentView = this.get('parentView');
-      var controller = parentView.get('controller');
-
-      if (controller.save) {
-        controller.save();
-      }
-      parentView.set('isEditing', false);
-    },
-
-    acceptChanges: function() {
         // Remove is editing property
         this.set('isEditing', false);
-
-        // If the person is empty, delete it
-        // otherwise save it with the new title
-        if(Ember.isEmpty(this.get('model.title'))) {
-            this.send('removePerson');
-        } else {
-            this.get('model').save();
-        }
+        this.get('model').save();
     },
   
     removePerson: function() {
@@ -63,6 +56,4 @@ export default Ember.Controller.extend({
         person.deleteRecord();
         person.save();
     }
-  })
- }
 });
