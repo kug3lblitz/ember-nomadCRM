@@ -30,7 +30,7 @@ export default Ember.Object.extend({
     }
   },
 
-  findAll: function(name){
+  findAll: function(name, record){
     return ajax("https://api.parse.com/1/classes/Person/").then(function(response){
         return response.results.map(function(person){
             person.id = person.objectId;

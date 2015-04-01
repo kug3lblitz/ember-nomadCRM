@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
     actions: {
       createRecord: function(){
         this.get('model').save().then(function(){
-            this.transitionToRoute('index');
+            this.transitionToRoute('records');
         }.bind(this));
       },
         editRecord: function() {
