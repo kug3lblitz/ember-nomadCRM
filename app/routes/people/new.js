@@ -3,6 +3,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
     model: function(){
-      return this.store.createRecord('person');
+      return this.store.createRecord('person', {
+        createdBy: this.get('session.currentUser')
+      });
     }
 });

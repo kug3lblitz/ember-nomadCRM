@@ -11,8 +11,8 @@ export default Model.extend({
           objects: [
             {
               __type: 'Pointer',
-              className: 'Bookmark',
-              objectId: bookmark.id
+              className: 'record',
+              objectId: record.id
             }
           ]
         }

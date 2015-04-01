@@ -17,3 +17,16 @@ body {
 .contactTable {
   background-color: white;
 }
+
+.const {
+  height: 265px;
+  width: 265px;
+  margin: 0 auto;
+  background-image: url("construction.gif");
+}
+
+.constText {
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-left: 42%;
+}

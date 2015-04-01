@@ -30,37 +30,37 @@
 
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.company"}}
-                <h6>{{person.model.company}}</h6>
+                <h6>{{session.currentuser.person.model.company}}</h6>
             {{/view}}
         </td>
         
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.name"}}
-            <h6>{{person.model.name}}</h6>
+            <h6>{{session.currentuser.person.model.name}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.address"}}
-            <h6>{{person.model.address}}</h6>
+            <h6>{{session.currentuser.person.model.address}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.industry"}}
-            <h6>{{person.model.industry}}</h6>
+            <h6>{{session.currentuser.person.model.industry}}</h6>
             {{/view}}
         </td>
         
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.phone"}}
-            <h6>{{person.model.phone}}</h6>
+            <h6>{{session.currentuser.person.model.phone}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.website"}}
-            <h6>{{person.model.website}}</h6>
+            <h6>{{session.currentuser.person.model.website}}</h6>
             {{/view}}
         </td>
 
@@ -69,27 +69,3 @@
 {{/each}}
 </table>
 
-
-<!--<form class="form-horizontal col-lg-6 col-lg-offset-3" {{action 'authenticate' on='submit'}}>-->
-  <!--<fieldset>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="identification" class="control-label">Email</label>-->
-      <!--<div>-->
-        {{!input value=identification placeholder='Enter Email' type='email' class="form-control"}}
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="password" class="control-label">Password</label>-->
-      <!--<div>-->
-        {{!input value=password placeholder='Enter Password' type='password' class="form-control"}}
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<button type="submit" class="btn btn-primary">Login</button>-->
-    <!--<p>-->
-      <!--Don't have an account? {{link-to 'Register' 'register'}}-->
-    <!--</p>-->
-  <!--</fieldset>-->
-<!--</form>-->
