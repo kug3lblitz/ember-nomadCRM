@@ -32,6 +32,9 @@
             {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.company"}}
                 <h6>{{session.currentuser.person.model.company}}</h6>
             {{/view}}
+
+            <button {{action "removePerson"}}>x</button>
+
         </td>
         
         <td class="NrecFrame">

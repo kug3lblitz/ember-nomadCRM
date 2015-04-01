@@ -23,9 +23,9 @@ export default Ember.Controller.extend({
         }
     },
   
-    removePerson: function () {
+    removePerson: function() {
         var person = this.get('model');
-        person.deleteRecord();
+        person.destroy();
         person.save();
     }
  }
