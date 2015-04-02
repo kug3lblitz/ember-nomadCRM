@@ -14,6 +14,12 @@
         <li>{{input value=model.industry placeholder="Taking Names" class="indType"}}</li>
     </ul>
 
+    {{! Below needs a computed property on the controller, put a pin in it}}
+
+     {{#if newRecord.isEmpty}}
+        {{else}}
     <button {{action 'createRecord'}} class="subRec btn red">Create New Record</button>
+     {{/if}}
+
 </div>
 

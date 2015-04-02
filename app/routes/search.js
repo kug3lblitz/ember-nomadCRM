@@ -11,3 +11,29 @@ export default Ember.Route.extend({
     });
   }
 });
+
+
+//import Ember from 'ember';
+//import ajax from 'ic-ajax';
+
+//export default Ember.Route.extend({
+
+//model: function() {
+    //return person;
+  //}
+//});
+
+//Ember.Handlebars.helper('search', Ember.View.extend({
+  //templateName: 'autocomplete',
+  
+  //filteredList: function() {
+    //var list = this.get('record'),
+        //filter = this.get('filter');
+
+    //if (!filter) { return list; }
+    
+    //return list.filter(function(item) {
+      //return item.name.indexOf(filter) !== -1;
+    //});
+  //}.property('list.@each', 'filter')
+//}));

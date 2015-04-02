@@ -1,4 +1,6 @@
-{{#each person in model}}
-  <p>{{person.url}}</p>
-{{/each}}
-{{outlet}}
+<p>{{input type="text" value=view.filter}}</p>
+    <ul>
+    {{#each view.filteredList}}
+      <li >{{name}}</li>  
+    {{/each}}
+    </ul>
