@@ -11,22 +11,38 @@
 }
 
 body {
-  background-image: url("desk.jpg");
-}
+  margin: 0;
+  background: url("desk.jpg") fixed;
+  background-position: 38% 20%;
+  background-size: cover;
+  padding: 0; }
 
+body:before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .8;
+  z-index: -1;
+  background-color: #56a3ff;
+  content: ''; }
 .contactTable {
   background-color: white;
 }
 
-.const {
-  height: 265px;
-  width: 265px;
-  margin: 0 auto;
-  background-image: url("construction.gif");
+#title {
+  margin-top: -5px;
 }
 
-.constText {
-  margin: 0 auto;
-  margin-top: 12px;
+.newRecord {
   margin-left: 42%;
+}
+
+.nuButn {
+  margin-left: 10%;
+}
+
+.inputList {
+  list-style: none;
 }
