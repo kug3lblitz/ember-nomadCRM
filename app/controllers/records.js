@@ -21,12 +21,7 @@ export default Ember.Controller.extend({
             } else {
           this.get('model').save();
         }
+        model.save();
     },
-  
-    removeRecord: function() {
-        var person = this.get('model');
-        person.deleteRecord();
-        person.save();
-    }
  }
 });

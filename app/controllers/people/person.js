@@ -11,7 +11,13 @@ export default Ember.Controller.extend({
        
         editRecord: function() {
             this.set('isEditing', true);
-      }
+      },
+
+        removeRecord: function() {
+            var person = this.get('model');
+            person.destroy();
+            //person.save();
+        }
     },
 
     save: function() {
@@ -19,9 +25,4 @@ export default Ember.Controller.extend({
         this.get('model').save();
     },
   
-    removePerson: function() {
-        var person = this.get('model');
-        person.destroy();
-        person.save();
-    }
 });
