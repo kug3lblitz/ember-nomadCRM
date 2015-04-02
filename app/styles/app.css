@@ -40,9 +40,14 @@ body:before {
 }
 
 .nuButn {
-  margin-left: 10%;
+  margin-left: 9%;
 }
 
 .inputList {
   list-style: none;
 }
+
+.hdrBar {
+  background: url("nbg.png");
+}
+
