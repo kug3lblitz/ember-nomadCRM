@@ -1,6 +1,19 @@
-<div class="new-record-lnk">
-    <button>{{#link-to 'people.new'}}Create New Record{{/link-to}}</button>
+<div class="newRecord">
+    <ul class="inputList">
+        <li>Staff Name</li>
+        <li>{{input value=model.name placeholder="Sam Smith" class="staffName"}}</li>
+        <li>Company Name</li>
+        <li>{{input value=model.company placeholder="Business, Inc" class="coNameInput"}}</li>
+        <li>Address</li>
+        <li>{{input value=model.address placeholder="123 Mulberry Street" class="coAddr"}}</li>
+        <li>Phone</li>
+        <li>{{input value=model.phone placeholder="(555)555-5555" class="coPhone"}}</li>
+        <li>Website</li>
+        <li>{{input value=model.website placeholder="www.theironyard.com" class="coWebsite"}}</li>
+        <li>Industry Type</li>
+        <li>{{input value=model.industry placeholder="Taking Names" class="indType"}}</li>
+    </ul>
+
+    <button {{action 'createRecord'}} class="btn btn-primary nuButn">Submit</button>
 </div>
 
-
-{{outlet}}

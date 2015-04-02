@@ -10,10 +10,7 @@ Router.map(function() {
     this.route("register");
     this.route('search', { path: '/search/:term' });
     this.route("records");
-    this.resource("people", function() {
-        this.route("new");
-    });
-    this.route("pullRec");
+    this.route("people");
 });
 
 export default Router;
