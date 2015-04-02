@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.0"
+  },
+  "applications": {
+    "CR(a)M Data": {
+      "applicationId": "5zQy2Xg9HHfY6BLa2G2z5GejWqs2wWZthZ5fKp1m",
+      "masterKey": "tOJguWyTwpw0gUQhhyrWW5Qrw788HmEsVJatBKmi"
+    },
+    "_default": {
+      "link": "CR(a)M Data"
+    }
+  }
+}
