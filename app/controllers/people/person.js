@@ -3,26 +3,30 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     actions: {
       
-       createRecord: function(){
-             this.get('model').save().then(function(){
-                this.transitionToRoute('index');
-            }.bind(this));
-      },
+    createRecord: function(){
+        this.get('model').save().then(function(){
+            this.transitionToRoute('index');
+        }.bind(this));
+   },
        
-        editRecord: function() {
-            this.set('isEditing', true);
-      }
-    },
+    editRecord: function() {
+        this.set('isEditing', true);
+   },
 
-    save: function() {
-        // Remove is editing property
+    acceptChanges: function() {
         this.set('isEditing', false);
-        this.get('model').save();
+
+        if (Ember.isEmpty(this.get('model.title'))) {
+          this.send('removePerson');
+            } else {
+          this.get('model').save();
+        }
     },
   
-    removePerson: function() {
+    removeRecord: function() {
         var person = this.get('model');
         person.destroy();
         person.save();
     }
+ }
 });

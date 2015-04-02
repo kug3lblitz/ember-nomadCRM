@@ -29,40 +29,40 @@
     <tr class="recFrame">
 
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.company"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.company"}}
                 <h6>{{session.currentuser.person.model.company}}</h6>
             {{/view}}
 
-            <button {{action "removePerson"}}>x</button>
+            <button {{action "removeRecord"}}>x</button>
 
         </td>
         
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.name"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.name"}}
             <h6>{{session.currentuser.person.model.name}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.address"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.address"}}
             <h6>{{session.currentuser.person.model.address}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.industry"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.industry"}}
             <h6>{{session.currentuser.person.model.industry}}</h6>
             {{/view}}
         </td>
         
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.phone"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.phone"}}
             <h6>{{session.currentuser.person.model.phone}}</h6>
             {{/view}}
         </td>
 
         <td class="NrecFrame">
-            {{#view 'double-click' focus-out="acceptChanges" valueBinding="person.model.website"}}
+            {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.website"}}
             <h6>{{session.currentuser.person.model.website}}</h6>
             {{/view}}
         </td>
