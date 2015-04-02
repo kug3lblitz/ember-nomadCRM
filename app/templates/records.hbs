@@ -1,5 +1,10 @@
 
 <table class="contactTable">
+
+    <th>
+        <td>Delete Record</td>
+    </th>
+
     <th>
         <td>Company Name</td>
     </th>
@@ -27,13 +32,15 @@
     {{#each person in model itemController='people/person'}}
 
     <tr class="recFrame">
+        
+        <td class="NrecFrame">
+            <button {{action "removeRecord"}}>x</button>
+        </td>
 
         <td class="NrecFrame">
             {{#view 'double-click' focus-out="acceptChanges" insert-newline="acceptChanges" valueBinding="person.model.company"}}
                 <h6>{{session.currentuser.person.model.company}}</h6>
             {{/view}}
-
-            <button {{action "removeRecord"}}>x</button>
 
         </td>
         
