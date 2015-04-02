@@ -1,6 +1,9 @@
-<p>{{input type="text" value=view.filter}}</p>
-    <ul>
-    {{#each view.filteredList}}
-      <li >{{name}}</li>  
-    {{/each}}
-    </ul>
+{{#each person in model}}
+  <p>{{session.currentuser.person.model.name}}</p>
+  <p>{{session.currentuser.person.model.company}}</p>
+  <p>{{session.currentuser.person.model.address}}</p>
+  <p>{{session.currentuser.person.model.phone}}</p>
+  <p>{{session.currentuser.person.model.website}}</p>
+  <p>{{session.currentuser.person.model.industry}}</p>
+{{/each}}
+{{outlet}}
