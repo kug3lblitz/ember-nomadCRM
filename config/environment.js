@@ -55,7 +55,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/CRaM/';
+    ENV.baseURL = '/ember-nomadCRM/';
 
   }
 
