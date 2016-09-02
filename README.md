@@ -2,7 +2,7 @@
 
 The objective of this project is to create a swift, lightweight, and completely free cross-platform CRM.
 
-I'm a new developer; the development of this project has been, and continues to be a huge learning experience, so development is likely to be slow. In time, I hope to include google account integration for drive, gmail, calendar, and keep support.
+Planned features in updates: google account integration for drive, gmail, calendar/keep support.
 
 This README outlines the details of collaborating on this Ember application.
 
